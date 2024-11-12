@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.todo {
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todo__title {
+  text-align: center;
+}
+
+.todo__input,
+.todo__add-button,
+.todo__filter-button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.todo__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo__task {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.todo__task:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo__task--completed {
+  background-color: #e0ffe0;
+}
+
+.todo__task--completed .todo__task-content {
+  text-decoration: line-through;
+}
+
+.todo__delete-button {
+  width: 32px;
+  height: 32px;
+  background-color: tomato;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.todo__delete-button:hover {
+  background-color: darkred;
+}
+
+.todo__filters {
+  display: flex;
+  gap: 8px;
+}
+
+.todo__task::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.3s;
+  z-index: 0;
+}
+
+.todo__task:hover::before {
+  background-color: rgba(255, 252, 252, 0.3);
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ccc;
+}

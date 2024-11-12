@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="todo/styles.css" />
+  </head>
+  <body>
+    <div class="todo">
+      <h1 class="todo__title">To-Do List</h1>
+      <input type="text" class="todo__input" placeholder="Добавить задачу..." />
+      <button class="todo__add-button">Добавить задачу</button>
+      <ul class="todo__list"></ul>
+      <div class="todo__filters">
+        <button class="todo__filter-button" data-filter="all" class="filterAll">
+          Все
+        </button>
+        <button
+          class="todo__filter-button"
+          data-filter="completed"
+          class="filterCompleted"
+        >
+          Завершенные
+        </button>
+        <button class="todo__filter-button" data-filter="pending">
+          Не завершенные
+        </button>
+      </div>
+    </div>
+    <script src="todo/todo.js"></script>
+  </body>
+</html>
